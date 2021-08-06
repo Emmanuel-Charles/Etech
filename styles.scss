@@ -14,8 +14,13 @@ img{
 }
 
 main{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100vw;
     height: 100%;
 
@@ -23,15 +28,25 @@ main{
             width: 100vw;
             height: 3em;
             min-width: 1200px;
-            justify-content: center;
-            align-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -ms-flex-line-pack: center;
+                align-content: center;
             background-color: var(--black);
 
             div{
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: row;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: row;
+                        flex-direction: row;
                 width: 60%;
-                justify-content: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
                 margin: auto;
                 height: 3em;
                 
@@ -63,10 +78,14 @@ main{
 
                     div{
                         width: 100%;
+                        height: -webkit-fit-content;
+                        height: -moz-fit-content;
                         height: fit-content;
                         top: 4em;
                         position: relative;
-                        justify-content: space-evenly;
+                        -webkit-box-pack: space-evenly;
+                            -ms-flex-pack: space-evenly;
+                                justify-content: space-evenly;
 
                             h1{
                                 position: absolute;
@@ -95,14 +114,26 @@ main{
             background-color: var(--black);
 
                 div{
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    flex-direction: row;
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                        -ms-flex-direction: row;
+                            flex-direction: row;
                     width: 60%;
                     margin: 0 auto;
 
                         .wu{
+                            display: -webkit-box;
+                            display: -ms-flexbox;
                             display: flex;
-                            flex-direction: column;
+                            -webkit-box-orient: vertical;
+                            -webkit-box-direction: normal;
+                                -ms-flex-direction: column;
+                                    flex-direction: column;
+                            height: -webkit-fit-content;
+                            height: -moz-fit-content;
                             height: fit-content;
                             margin: auto 0;
                             width: 50%;
@@ -134,7 +165,11 @@ main{
                                     margin: 1em 0 0 0;
                                 }
                                 .btns{
+                                    height: -webkit-fit-content;
+                                    height: -moz-fit-content;
                                     height: fit-content;
+                                    width: -webkit-fit-content;
+                                    width: -moz-fit-content;
                                     width: fit-content;
                                     margin: 0;
                                     margin: 1em 0 0 0;
@@ -167,12 +202,19 @@ main{
                 }
 
                 @media only screen and (max-width: 480px){
+                    height: -webkit-fit-content;
+                    height: -moz-fit-content;
                     height: fit-content;
+                    max-height: -webkit-fit-content;
+                    max-height: -moz-fit-content;
                     max-height: fit-content;
                     min-width: 0;
 
                         div{
-                            flex-direction: column-reverse;
+                            -webkit-box-orient: vertical;
+                            -webkit-box-direction: reverse;
+                                -ms-flex-direction: column-reverse;
+                                    flex-direction: column-reverse;
                             width: 100%;
                             margin: 2em auto;
 
@@ -181,7 +223,10 @@ main{
                                     margin: 0 auto;
 
                                         .btns{
-                                            flex-direction: row;
+                                            -webkit-box-orient: horizontal;
+                                            -webkit-box-direction: normal;
+                                                -ms-flex-direction: row;
+                                                    flex-direction: row;
                                         }
                                 }
                                 img{
@@ -199,17 +244,32 @@ main{
             background-color: var(--black);
 
                 div{
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    flex-direction: column;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                            flex-direction: column;
                     margin: 2em auto;
                     height: 90%;
                     width: 60%;
-                    justify-content: space-between;
-                    align-content: space-evenly;
+                    -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
+                            justify-content: space-between;
+                    -ms-flex-line-pack: space-evenly;
+                        align-content: space-evenly;
 
                         .sec1{
+                            display: -webkit-box;
+                            display: -ms-flexbox;
                             display: flex;
-                            flex-direction: column;
+                            -webkit-box-orient: vertical;
+                            -webkit-box-direction: normal;
+                                -ms-flex-direction: column;
+                                    flex-direction: column;
+                            height: -webkit-fit-content;
+                            height: -moz-fit-content;
                             height: fit-content;
 
                                 h2{
@@ -244,8 +304,13 @@ main{
                                 }
                         }
                         .sec2{
+                            display: -webkit-box;
+                            display: -ms-flexbox;
                             display: flex;
-                            flex-direction: row;
+                            -webkit-box-orient: horizontal;
+                            -webkit-box-direction: normal;
+                                -ms-flex-direction: row;
+                                    flex-direction: row;
                             height: 14em;
                             width: 110%;
 
@@ -254,9 +319,16 @@ main{
                                     background-color: rgba(255, 255, 255, 0.1);
                                     border-radius: 10px; 
                                     position: relative;
+                                    display: -webkit-box;
+                                    display: -ms-flexbox;
                                     display: flex;
-                                    flex-direction: column;
-                                    justify-content: flex-end;
+                                    -webkit-box-orient: vertical;
+                                    -webkit-box-direction: normal;
+                                        -ms-flex-direction: column;
+                                            flex-direction: column;
+                                    -webkit-box-pack: end;
+                                        -ms-flex-pack: end;
+                                            justify-content: flex-end;
                                     margin: 0 1em 0 0;
 
 
@@ -264,7 +336,20 @@ main{
                                             position: absolute;
                                             top: -4.5em;
                                             width: 14.5em;
-                                            animation: blin 2s ease-in-out 1s infinite;
+                                            -webkit-animation: blin 2s ease-in-out 1s infinite;
+                                                    animation: blin 2s ease-in-out 1s infinite;
+
+                                                @-webkit-keyframes blin{
+                                                    0%{
+                                                        width: 14.5em;
+                                                    }
+                                                    50%{
+                                                        width: 15em;
+                                                    }
+                                                    100%{
+                                                        width: 14.5em;
+                                                    }
+                                                }
 
                                                 @keyframes blin{
                                                     0%{
@@ -280,7 +365,9 @@ main{
                                         }
                                         img{
                                             
-                                            animation: blin 2s ease-in-out 1s infinite;
+                                            -webkit-animation: blin 2s ease-in-out 1s infinite;
+                                            
+                                                    animation: blin 2s ease-in-out 1s infinite;
                                         }
                                 }
                                 p{
@@ -296,14 +383,23 @@ main{
 
                 @media only screen and (max-width: 480px){
                     min-width: 0;
+                    max-height: -webkit-fit-content;
+                    max-height: -moz-fit-content;
                     max-height: fit-content;
+                    height: -webkit-fit-content;
+                    height: -moz-fit-content;
                     height: fit-content;
 
                         div{
                             width: 100%;
 
                                 .sec2{
-                                    flex-direction: column;
+                                    -webkit-box-orient: vertical;
+                                    -webkit-box-direction: normal;
+                                        -ms-flex-direction: column;
+                                            flex-direction: column;
+                                    height: -webkit-fit-content;
+                                    height: -moz-fit-content;
                                     height: fit-content;
                                     width: 100vw;
 
@@ -331,13 +427,20 @@ main{
 
                     div{
                         background-color: var(--background);
+                        display: -webkit-box;
+                        display: -ms-flexbox;
                         display: flex;
-                        flex-direction: row;
+                        -webkit-box-orient: horizontal;
+                        -webkit-box-direction: normal;
+                            -ms-flex-direction: row;
+                                flex-direction: row;
                         margin: 3em auto 0;
                         margin: 0;
                         width: 95%;
                         border-radius: 10px;    
-                        justify-content: space-evenly;
+                        -webkit-box-pack: space-evenly;    
+                            -ms-flex-pack: space-evenly;    
+                                justify-content: space-evenly;
 
                             img{
                                 height: 10em;
@@ -347,8 +450,13 @@ main{
                             }
 
                             div{
+                                display: -webkit-box;
+                                display: -ms-flexbox;
                                 display: flex;
-                                flex-direction: column;
+                                -webkit-box-orient: vertical;
+                                -webkit-box-direction: normal;
+                                    -ms-flex-direction: column;
+                                        flex-direction: column;
                                 background-color: transparent;
                                 margin: 0 1em 0 0;
                                 
@@ -371,13 +479,19 @@ main{
             }
 
             @media only screen and (max-width: 480px){
+                height: -webkit-fit-content;
+                height: -moz-fit-content;
                 height: fit-content;
+                max-height: -webkit-fit-content;
+                max-height: -moz-fit-content;
                 max-height: fit-content;
 
                     div{
 
                             .sect2{
                                 grid-template-columns: auto;
+                                height: -webkit-fit-content;
+                                height: -moz-fit-content;
                                 height: fit-content;
 
                                     div{
@@ -394,25 +508,44 @@ main{
             min-height: 27em;
 
                 div{
+                    width: -webkit-fit-content;
+                    width: -moz-fit-content;
                     width: fit-content;
                     height: 70%;
                 }
 
                 .sect2{
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    flex-direction: row; 
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                        -ms-flex-direction: row;
+                            flex-direction: row; 
+                    width: -webkit-fit-content; 
+                    width: -moz-fit-content; 
                     width: fit-content;
                     position: relative;
+                    height: -webkit-fit-content;
+                    height: -moz-fit-content;
                     height: fit-content; 
-                    align-content: center;
+                    -ms-flex-line-pack: center; 
+                        align-content: center;
 
                         div{
                             background-color: var(--background);
                             border-radius: 10px;
+                            height: -webkit-fit-content;
+                            height: -moz-fit-content;
                             height: fit-content;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
                             display: flex;
                             margin: 0 .5em;
-                            flex-direction: column;
+                            -webkit-box-orient: vertical;
+                            -webkit-box-direction: normal;
+                                -ms-flex-direction: column;
+                                    flex-direction: column;
 
                                 img{
                                     width: 12em;
@@ -443,31 +576,52 @@ main{
                 }
 
                 @media only screen and (max-width: 480px){
+                    height: -webkit-fit-content;
+                    height: -moz-fit-content;
                     height: fit-content;
                     padding-top: 0;
+                    min-height: -webkit-fit-content;
+                    min-height: -moz-fit-content;
                     min-height: fit-content;
 
                         div{
                             width: 100vw;
 
                                 .sect2{
-                                    flex-direction: column-reverse;
+                                    -webkit-box-orient: vertical;
+                                    -webkit-box-direction: reverse;
+                                        -ms-flex-direction: column-reverse;
+                                            flex-direction: column-reverse;
 
                                         div{
+                                            width: -webkit-fit-content;
+                                            width: -moz-fit-content;
                                             width: fit-content;
                                             margin: 1em auto;
                                         }
 
                                         .rar{
                                             top: auto;
-                                            transform: rotate(
+                                            -webkit-transform: rotate(
+                                                90deg
+                                            );
+                                                -ms-transform: rotate(
+                                                90deg
+                                            );
+                                                    transform: rotate(
                                                 90deg
                                             );
                                             right: calc(50% - 1em);
                                         }
                                         .lar{
                                             left: calc(50% - 1em);
-                                            transform: rotate(
+                                            -webkit-transform: rotate(
+                                                90deg
+                                            );
+                                                -ms-transform: rotate(
+                                                90deg
+                                            );
+                                                    transform: rotate(
                                                 90deg
                                             );
                                             bottom: auto;
@@ -486,16 +640,28 @@ main{
 
                 .sect2{
                     width: 100%;
-                    justify-content: flex-end;
+                    -webkit-box-pack: end;
+                        -ms-flex-pack: end;
+                            justify-content: flex-end;
 
                         div{
+                            display: -webkit-box;
+                            display: -ms-flexbox;
                             display: flex;
-                            flex-direction: row;
+                            -webkit-box-orient: horizontal;
+                            -webkit-box-direction: normal;
+                                -ms-flex-direction: row;
+                                    flex-direction: row;
                             width: 100%;
 
                                 .lt{
+                                    display: -webkit-box;
+                                    display: -ms-flexbox;
                                     display: flex;
-                                    flex-direction: column;
+                                    -webkit-box-orient: vertical;
+                                    -webkit-box-direction: normal;
+                                        -ms-flex-direction: column;
+                                            flex-direction: column;
                                     height: 60%;
 
                                         h2{
@@ -505,8 +671,13 @@ main{
                                         }
 
                                         div{
+                                            display: -webkit-box;
+                                            display: -ms-flexbox;
                                             display: flex;
-                                            flex-direction: column;
+                                            -webkit-box-orient: vertical;
+                                            -webkit-box-direction: normal;
+                                                -ms-flex-direction: column;
+                                                    flex-direction: column;
                                             height: 35%;
 
                                                 h6{
@@ -527,11 +698,18 @@ main{
                                         }
 
                                         .social{
+                                            height: -webkit-fit-content;
+                                            height: -moz-fit-content;
                                             height: fit-content;
 
                                                 .icons{
+                                                    display: -webkit-box;
+                                                    display: -ms-flexbox;
                                                     display: flex;
-                                                    flex-direction: row;
+                                                    -webkit-box-orient: horizontal;
+                                                    -webkit-box-direction: normal;
+                                                        -ms-flex-direction: row;
+                                                            flex-direction: row;
                                                     width: 50%;
                                                 margin: 0 auto 0 0;
 
@@ -546,10 +724,17 @@ main{
                                 .rt{
 
                                     .form{
+                                        display: -webkit-box;
+                                        display: -ms-flexbox;
                                         display: flex;
-                                        flex-direction: column;
+                                        -webkit-box-orient: vertical;
+                                        -webkit-box-direction: normal;
+                                            -ms-flex-direction: column;
+                                                flex-direction: column;
                                         gap: 0.5em 0;
-                                        justify-content: center;
+                                        -webkit-box-pack: center;
+                                            -ms-flex-pack: center;
+                                                justify-content: center;
 
                                             h6{
                                                 color: white;
@@ -615,7 +800,10 @@ main{
                     .sect2{
 
                             div{
-                            flex-direction: column-reverse;
+                            -webkit-box-orient: vertical;
+                            -webkit-box-direction: reverse;
+                                -ms-flex-direction: column-reverse;
+                                    flex-direction: column-reverse;
                             width: 90%;
                             margin: 0 auto;            
 
@@ -624,7 +812,10 @@ main{
                                 .form{
 
                                     div{
-                                        flex-direction: row;
+                                        -webkit-box-orient: horizontal;
+                                        -webkit-box-direction: normal;
+                                            -ms-flex-direction: row;
+                                                flex-direction: row;
                                         margin: 0;
                                         width: 100%
                                     }
@@ -646,24 +837,47 @@ main{
             max-height: 25em;
             min-width: 1200px;
             background-color: #111111;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
 
                 div{
+                    height: -webkit-fit-content;
+                    height: -moz-fit-content;
                     height: fit-content;
                 }
                 .t1{
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    flex-direction: row;
-                    justify-content: flex-end;
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                        -ms-flex-direction: row;
+                            flex-direction: row;
+                    -webkit-box-pack: end;
+                        -ms-flex-pack: end;
+                            justify-content: flex-end;
                     height: 80%;
 
                         div{
+                            height: -webkit-fit-content;
+                            height: -moz-fit-content;
                             height: fit-content;
                             width: 23%;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
                             display: flex;
-                            flex-direction: column;
-                            justify-content: space-between;
+                            -webkit-box-orient: vertical;
+                            -webkit-box-direction: normal;
+                                -ms-flex-direction: column;
+                                    flex-direction: column;
+                            -webkit-box-pack: justify;
+                                -ms-flex-pack: justify;
+                                    justify-content: space-between;
 
                                 p{
                                     color: rgba(255, 255, 255, 0.5);
@@ -681,7 +895,9 @@ main{
                 .t2{
                     text-align: center;
                     height: 20%;
-                    justify-content: space-between;
+                    -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
+                            justify-content: space-between;
                     color: rgba(255, 255, 255, 0.5);
                     font-family:Arial, Helvetica, sans-serif;
                     margin: auto 0;
@@ -698,11 +914,17 @@ main{
                 @media only screen and (max-width: 480px){
                     width: 100vw;
                     min-width: 0;
+                    height: -webkit-fit-content;
+                    height: -moz-fit-content;
                     height: fit-content;
 
                         .t1{
+                            height: -webkit-fit-content;
+                            height: -moz-fit-content;
                             height: fit-content;
-                            justify-content: space-between;
+                            -webkit-box-pack: justify;
+                                -ms-flex-pack: justify;
+                                    justify-content: space-between;
 
                             div{
 
