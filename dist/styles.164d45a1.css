@@ -13,7 +13,12 @@ img {
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 100vw;
   height: 100%;
@@ -22,14 +27,24 @@ main .fpage {
   width: 100vw;
   height: 3em;
   min-width: 1200px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-line-pack: center;
   align-content: center;
   background-color: var(--black);
 }
 main .fpage div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   width: 60%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: auto;
   height: 3em;
@@ -60,9 +75,13 @@ main .fpage div .sign {
   }
   main .fpage div {
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     top: 4em;
     position: relative;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
   }
   main .fpage div h1 {
@@ -88,14 +107,26 @@ main .spage {
   background-color: var(--black);
 }
 main .spage div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   width: 60%;
   margin: 0 auto;
 }
 main .spage div .wu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   margin: auto 0;
   width: 50%;
@@ -127,7 +158,11 @@ main .spage div .wu h4 {
   margin: 1em 0 0 0;
 }
 main .spage div .wu .btns {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin: 0;
   margin: 1em 0 0 0;
@@ -157,11 +192,18 @@ main .spage div img {
 }
 @media only screen and (max-width: 480px) {
   main .spage {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
     max-height: fit-content;
     min-width: 0;
   }
   main .spage div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     width: 100%;
     margin: 2em auto;
@@ -171,6 +213,9 @@ main .spage div img {
     margin: 0 auto;
   }
   main .spage div .wu .btns {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
   main .spage div img {
@@ -186,17 +231,32 @@ main .tpage {
   background-color: var(--black);
 }
 main .tpage div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin: 2em auto;
   height: 90%;
   width: 60%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-line-pack: space-evenly;
   align-content: space-evenly;
 }
 main .tpage div .sec1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 main .tpage div .sec1 h2 {
@@ -229,7 +289,12 @@ main .tpage div .sec1 p i {
   line-height: 0;
 }
 main .tpage div .sec2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   height: 14em;
   width: 110%;
@@ -239,8 +304,15 @@ main .tpage div .sec2 div {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   margin: 0 1em 0 0;
 }
@@ -248,7 +320,19 @@ main .tpage div .sec2 div .mouse {
   position: absolute;
   top: -4.5em;
   width: 14.5em;
+  -webkit-animation: blin 2s ease-in-out 1s infinite;
   animation: blin 2s ease-in-out 1s infinite;
+}
+@-webkit-keyframes blin {
+  0% {
+    width: 14.5em;
+  }
+  50% {
+    width: 15em;
+  }
+  100% {
+    width: 14.5em;
+  }
 }
 @keyframes blin {
   0% {
@@ -262,6 +346,7 @@ main .tpage div .sec2 div .mouse {
   }
 }
 main .tpage div .sec2 div img {
+  -webkit-animation: blin 2s ease-in-out 1s infinite;
   animation: blin 2s ease-in-out 1s infinite;
 }
 main .tpage div .sec2 p {
@@ -274,14 +359,23 @@ main .tpage div .sec2 p {
 @media only screen and (max-width: 480px) {
   main .tpage {
     min-width: 0;
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
     max-height: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
   main .tpage div {
     width: 100%;
   }
   main .tpage div .sec2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     width: 100vw;
   }
@@ -305,12 +399,19 @@ main .fopage div .sect2 {
 }
 main .fopage div .sect2 div {
   background-color: var(--background);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   margin: 3em auto 0;
   margin: 0;
   width: 95%;
   border-radius: 10px;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
 }
 main .fopage div .sect2 div img {
@@ -320,7 +421,12 @@ main .fopage div .sect2 div img {
   margin: 0px 0.7em;
 }
 main .fopage div .sect2 div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-color: transparent;
   margin: 0 1em 0 0;
@@ -339,11 +445,17 @@ main .fopage div .sect2 div div p {
 }
 @media only screen and (max-width: 480px) {
   main .fopage {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
     max-height: fit-content;
   }
   main .fopage div .sect2 {
     grid-template-columns: auto;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
   main .fopage div .sect2 div {
@@ -356,23 +468,42 @@ main .fipage {
   min-height: 27em;
 }
 main .fipage div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   height: 70%;
 }
 main .fipage .sect2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
+  -ms-flex-line-pack: center;
   align-content: center;
 }
 main .fipage .sect2 div {
   background-color: var(--background);
   border-radius: 10px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 0.5em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 main .fipage .sect2 div img {
@@ -400,27 +531,40 @@ main .fipage .sect2 .lar {
 }
 @media only screen and (max-width: 480px) {
   main .fipage {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     padding-top: 0;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
     min-height: fit-content;
   }
   main .fipage div {
     width: 100vw;
   }
   main .fipage div .sect2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
   main .fipage div .sect2 div {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 1em auto;
   }
   main .fipage div .sect2 .rar {
     top: auto;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     right: calc(50% - 1em);
   }
   main .fipage div .sect2 .lar {
     left: calc(50% - 1em);
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     bottom: auto;
     top: 0;
@@ -431,15 +575,27 @@ main .sipage {
 }
 main .sipage div .sect2 {
   width: 100%;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 main .sipage div .sect2 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   width: 100%;
 }
 main .sipage div .sect2 div .lt {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   height: 60%;
 }
@@ -449,7 +605,12 @@ main .sipage div .sect2 div .lt h2 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 main .sipage div .sect2 div .lt div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   height: 35%;
 }
@@ -468,10 +629,17 @@ main .sipage div .sect2 div .lt div p i {
   font-size: 1.2em;
 }
 main .sipage div .sect2 div .lt .social {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 main .sipage div .sect2 div .lt .social .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   width: 50%;
   margin: 0 auto 0 0;
@@ -481,9 +649,16 @@ main .sipage div .sect2 div .lt .social .icons i {
   cursor: pointer;
 }
 main .sipage div .sect2 div .rt .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.5em 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 main .sipage div .sect2 div .rt .form h6 {
@@ -537,11 +712,17 @@ main .sipage div .sect2 div .rt .form button {
 }
 @media only screen and (max-width: 480px) {
   main .sipage div .sect2 div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     width: 90%;
     margin: 0 auto;
   }
   main .sipage div .sect2 div .rt .form div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     margin: 0;
     width: 100%;
@@ -558,23 +739,46 @@ main .footer {
   max-height: 25em;
   min-width: 1200px;
   background-color: #111111;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 main .footer div {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 main .footer .t1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   height: 80%;
 }
 main .footer .t1 div {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   width: 23%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 main .footer .t1 div p {
@@ -591,6 +795,8 @@ main .footer .t1 div .h {
 main .footer .t2 {
   text-align: center;
   height: 20%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   color: rgba(255, 255, 255, 0.5);
   font-family: Arial, Helvetica, sans-serif;
@@ -606,10 +812,16 @@ main .footer .t2 p {
   main .footer {
     width: 100vw;
     min-width: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
   main .footer .t1 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
   main .footer .t1 div p {
