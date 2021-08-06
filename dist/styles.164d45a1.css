@@ -660,9 +660,10 @@ main .sipage div .sect2 div .rt .form {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.5em 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  height: 13em;
 }
 main .sipage div .sect2 div .rt .form h6 {
   color: white;
@@ -671,6 +672,7 @@ main .sipage div .sect2 div .rt .form h6 {
 }
 main .sipage div .sect2 div .rt .form div {
   height: 2em;
+  margin: 0;
 }
 main .sipage div .sect2 div .rt .form div input {
   background-color: rgba(255, 255, 255, 0.2);
