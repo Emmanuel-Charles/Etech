@@ -307,6 +307,8 @@ main{
                             display: -webkit-box;
                             display: -ms-flexbox;
                             display: flex;
+                            position: relative;
+                            top: 3em;
                             -webkit-box-orient: horizontal;
                             -webkit-box-direction: normal;
                                 -ms-flex-direction: row;
@@ -632,6 +634,7 @@ main{
                 }
         }
         .sipage{
+            height: fit-content;
             max-height: 38em;
 
 
